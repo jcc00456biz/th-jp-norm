@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "th-jp-norm"
+version = "1.0.0"
+description = "日本語文字列の表記ゆれを正規化するPythonパッケージ"
+readme = "README.md"
+requires-python = ">=3.14"
+license = "Apache-2.0"
+license-files = ["LICENSE"]
+authors = [
+    { name = "T.H (Tech Lab Works)", email = "jcc00456biz@gmail.com" }
+]
+keywords = ["japanese", "normalization", "text-processing"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: Text Processing",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = []
+
+[project.optional-dependencies]
+test = ["pytest>=8.0"]
+
+[project.urls]
+Homepage = "https://github.com/jcc00456biz/th-jp-norm"
+Repository = "https://github.com/jcc00456biz/th-jp-norm.git"
+"Bug Tracker" = "https://github.com/jcc00456biz/th-jp-norm/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+th_jp_norm = ["py.typed"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
